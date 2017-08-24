@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="../static/js/sizebasefont.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/mobiscroll.css">
+    <title>游记</title> 
+  </head>
+  <body style="position:relative; background:#fff;">
+  <header class="head batten">
+    <em class="back"></em>
+    <span>订单支付</span>
+
+  </header>
+ 
+  <article class="tdairy" style=" padding-top:3rem;">
+     <section class="proper">
+        <div class="ceshi">
+        <a class="wa1"><em class="rate"></em></a>
+        <a class="wa2"><em class="rate"></em></a>
+        <a class="wa3"><em class="rate"></em></a>
+        <a class="wa4"><em class="rate"></em></a>
+        </div>
+     </section>
+     <section class="advance">
+        <a>提交订单</a><a>确认订单</a><a>申请折扣</a><a>等待付款</a>
+     </section>
+
+     <section class="letterscc ceshirr">
+       <p><span class="left"><img src="../static/images/alipay.png"></span><span class="center">支付宝支付</span><a></a></p>
+       <p><span class="left"><img src="../static/images/weChat.png"></span><span class="center">微信钱包支付</span><a></a></p>
+       <p class="bottoma"><span class="left"><img src="../static/images/bank_card.png"></span><span class="center">银行卡支付</span><a></a></p>
+       <div class="commen">
+          <ul>
+<li><input type="radio"><img src="../static/images/zgyh.png"></li>
+             <li><input type="radio" name="RadioGroup1" id="RadioGroup1_0"><img src="../static/images/zgyz.png"></li>
+             <li><input type="radio" name="RadioGroup1" id="RadioGroup1_1"><img src="../static/images/zgyh.png"></li>
+             <li><input type="radio" name="RadioGroup1" id="RadioGroup1_2"><img src="../static/images/zgyh.png"></li>
+             <li><input type="radio" name="RadioGroup1" id="RadioGroup1_3"><img src="../static/images/zgyz.png"></li>
+             <li><input type="radio" name="RadioGroup1" id="RadioGroup1_4"><img src="../static/images/zgyh.png"></li>
+             
+             
+             <div style=" clear:both;"></div>
+          </ul>
+       </div>
+     </section>
+     
+     <section class="lettersnn">
+     <a class="what"><img id="cc" src="../static/images/arrow2.png" /></a>
+     </section>
+  </article>
+
+  
+ <script src="../static/js/jquery.min.js"></script>  
+ <script type="text/javascript">
+$(document).ready(function(){
+  $(".what").click(function(){
+	if($(".ceshirr").css("overflow") != "visible"){
+	    $(".ceshirr").css("overflow","visible");
+		$(".ceshirr").css("height","auto");
+		$("#cc").css("margin","0 auto");
+		$("#cc").attr("src","../static/images/arrow3.png");
+
+	}else{
+		$(".ceshirr").css("overflow","hidden");
+		$(".ceshirr").css("height","12.5rem");
+		$("#cc").css("margin","0");
+		$("#cc").attr("src","../static/images/arrow2.png");
+	}
+
+  });
+});
+</script> 
+  </body>
+</html>

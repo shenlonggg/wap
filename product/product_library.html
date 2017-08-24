@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="static/js/sizebasefont.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <title></title> 
+  </head>
+  <body onLoad="loaded()" style=" background:#fff;">
+  <header class="tophead">
+    <em class="back_1"></em>
+    <b class="hand"><img src="static/images/user.jpg"></b>
+    <span>产品库</span>
+  </header>
+   
+  <article class="nav">
+       <div id="warp" class="mg-auto">
+        <!--菜单-->
+		<div class="Menu_box">
+        	<!---------左侧菜单---------->
+        	<div id="left_Menu">
+                <div id="scroller">
+                     <ul>
+                         <li>
+                            <a class="a1"></a>
+                            <a class="a2"></a>
+                            <a class="a3"></a>
+                            <a class="a4"></a>
+                            <a class="a5"></a>
+                            <a class="a6"></a>
+                            <a class="a7"></a>
+                            <a class="a8"></a>
+                         </li>
+                     </ul>
+                </div>
+            </div>
+            <!---------右侧侧菜单---------->
+            <div id="right_Menu">
+                <div id="scroller2">
+                  
+                 <div class="starboard"> 
+                   <div class="search">
+                    <em class="hunt"><img src="static/images/search.png"></em>
+                    <input type="text" placeholder="">
+                   </div>
+                   
+                 <h2>主题</h2>
+                 
+                 <ul>
+                   <li  id="w1"><a>山水</a></li>
+                   <li id="w2"><a>徒步</a></li>
+                   <li class="right"  id="w3"><a>游泳</a></li>
+                   <li  id="w4"><a>潜水</a></li>
+                   <li  id="w5"><a>漂流</a></li>
+                   <li class="right"  id="w6"><a>攀岩</a></li>
+                   <li  id="w7"><a>徒步</a></li>
+                   <li  id="w8"><a>山水</a></li>
+                   <li class="right"  id="w9"><a>步行</a></li>
+                   <div style=" clear:both;"></div>
+                 </ul>
+                 
+                 <p><img src="static/images/u_bg.jpg"></p>
+                 <p><img src="static/images/u_bg.jpg"></p> 
+                 <p><img src="static/images/u_bg.jpg"></p> 
+                 <p><img src="static/images/u_bg.jpg"></p> 
+                 <p><img src="static/images/u_bg.jpg"></p>
+                   
+                 </div>
+ 
+                </div>
+            </div>
+
+        </div>
+        <!--菜单end-->
+      </div>
+   <div style=" clear:both;"></div>  
+  </article>
+ 
+  <footer class="nav">
+      <a>
+        <img src="static/images/tidings.png">
+        <p>咨询</p>
+      </a>
+      <a>
+        <img src="static/images/produce.png">
+        <p class="color">产品</p>
+      </a>
+      <a class="photograph">
+        <img src="static/images/photograph.png">
+      </a>
+      <a>
+        <img src="static/images/assistant.png">
+        <p>助手</p>
+      </a>
+      <a>
+        <img src="static/images/complaints.png">
+        <p>吐槽</p>
+      </a>
+  </footer>
+  
+<script src="static/js/jquery.min.js"></script> 
+<script type="text/javascript" src="static/js/jquery1.3.2.js"></script>
+<script type="text/javascript" src="static/js/iscroll.js"></script>
+<script type="text/javascript" charset="utf-8">   
+	$(function() {   		
+		//菜单框架自动获取高度
+		var doc_H=$(document).height();	
+		$('.Menu_box').height(doc_H);
+		window.onresize=function(){
+			var doc_H=$(document).height();	
+			$('.Menu_box').height(doc_H);
+		}
+	});
+
+
+	var myScroll_left;
+	var myScroll_right;
+	function loaded () {
+		myScroll_left = new IScroll('#left_Menu', { mouseWheel: true, click: true });
+		myScroll_right = new IScroll('#right_Menu', { mouseWheel: true, click: true });
+	}
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+</script> 
+<script type="text/javascript">
+		jQuery(function(){
+			var list = jQuery('#w1, #w2, #w3, #w4, #w5, ,#w6, ,#w7, ,#w8, #w9,');
+			list.click(function(){
+				list.removeClass('focuswall');
+				jQuery(this).addClass('focuswall');
+				return false;
+			});
+		});
+	</script>
+  </body>
+</html>

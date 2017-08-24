@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="../static/js/sizebasefont.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/mobiscroll.css">
+    <title>游记</title> 
+  </head>
+  <body style="position:relative;">
+  <header class="head batten">
+    <em class="back"></em>
+    <span>订单支付</span>
+
+  </header>
+ 
+  <article class="tdairy" style=" padding-top:3rem;">
+     <section class="proper">
+        <div class="ceshi">
+        <a class="wa1"><em class="rate"></em></a>
+        <a class="wa2"><em class="rate"></em></a>
+        <a class="wa3"><em class="rate"></em></a>
+        <a class="wa4"><em class="rate"></em></a>
+        </div>
+     </section>
+     <section class="advance">
+        <a>提交订单</a><a>确认订单</a><a>申请折扣</a><a>等待付款</a>
+     </section>
+    
+     <section class="while">
+        <h2 class="hour"><span class="time">付款剩余时间</span><span class="right">120：00</span></h2>
+     </section>
+     
+     <section class="checkou">上海直飞东京5天4夜</section>
+     
+     <section class="letters">
+       <p><span class="left">姓名:</span><span class="right">刘德华</span></p>
+       <p><span class="left">手机:</span><span class="right">15821743117</span></p>
+       <p><span class="left">出团日期:</span><span class="right">2015-10-22</span></p>
+     </section>
+     
+     <section class="lettersyy">
+        <p>
+        <span class="left">成人</span>
+        <span class="center">x1</span>
+        <span class="right">￥3500.00</span>
+        </p>
+        <p>
+        <span class="left">儿童</span>
+        <span class="center">x1</span>
+        <span class="right">￥3500.00</span>
+        </p>
+        <p>
+        <span class="left">老年</span>
+        <span class="center">x1</span>
+        <span class="right">￥3500.00</span>
+        </p>
+        <p>
+        <span class="left">立减</span>
+        <span class="center"></span>
+        <span class="right">-￥3500.00</span>
+        </p>
+        <p>
+        <span class="left">红包</span>
+        <span class="center"></span>
+        <span class="right">-￥3500.00</span>
+        </p>
+        <p>
+        <span class="left">代金券</span>
+        <span class="center"></span>
+        <span class="right">-￥3500.00</span>
+        </p>
+     </section>
+
+     <section class="letterspp">
+       <p><span class="left">保险信息:</span></p>
+     </section>
+     
+     <section class="lettersqq ceshikk">
+       <p><span class="left">保险1：</span><span class="center">单价￥30/人</span><em></em></p>
+       <p><span class="left">保险1：</span><span class="center">单价￥30/人</span><em></em></p>
+       <p><span class="left">保险1：</span><span class="center">单价￥30/人</span><em></em></p>
+       <p><span class="left">保险1：</span><span class="center">单价￥30/人</span><em></em></p>
+       <p><span class="left">保险1：</span><span class="center">单价￥30/人</span><em></em></p>
+     </section>
+     
+     <section class="letterskk">
+     <a class="what"><img id="cc" src="../static/images/arrow2.png" /></a>
+     </section>
+  </article>
+
+  <footer class="paymenty">
+    <div class="goods">订单价格:￥12000</div>
+    <button>去付款</button>
+  </footer>
+  
+  <script src="../static/js/jquery.min.js"></script>  
+ <script type="text/javascript">
+$(document).ready(function(){
+  $(".what").click(function(){
+	if($(".ceshikk").css("overflow") != "visible"){
+	    $(".ceshikk").css("overflow","visible");
+		$(".ceshikk").css("height","auto");
+		$("#cc").attr("src","../static/images/arrow3.png");
+
+	}else{
+		$(".ceshikk").css("overflow","hidden");
+		$(".ceshikk").css("height","2rem");
+		$("#cc").attr("src","../static/images/arrow2.png");
+	}
+
+  });
+});
+</script> 
+  </body>
+</html>

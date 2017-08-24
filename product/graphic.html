@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="static/js/sizebasefont.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="static/css/carousel.css">
+    <title>照片详情</title> 
+  </head>
+  <body class="white">
+  <article class="graphic">
+  <div class="gr_title"><em></em><span>1/8 page</span><cite></cite></div>  
+  <div class="picbox" id="picbox">
+    <div class="item"><img src="static/images/img.jpg"><div class="mask">无法连接到互联网，您的计算机未连接到互联网，因此 Google Chrome 无法显示该网页。无法连接到互联网，您的计算机未连接到互联网，因此 Google Chrome 无法显示该网页。</div></div>
+    <div class="item"><img src="static/images/img.jpg"></div>
+    <div class="item"><img src="static/images/img.jpg"></div>
+  </div>  
+  <script src="static/js/jquery.min.js"></script>  
+  <script src="static/js/carousel.js"></script> 
+  <script type="text/javascript">
+    var $picbox = $('#picbox')
+    var $pre    = $('.gr_title em');
+    var $next   = $('.gr_title cite');
+    var winh = $(window).height();
+    $picbox.height(winh);
+    var owl = $('#picbox');
+    owl.owlCarousel({
+      pagination:true,
+      autoPlay: true,
+      singleItem: true,
+      pagination:false
+    });
+    $next.click(function(){
+      owl.trigger('owl.next');
+    });
+    $pre.click(function(){
+      owl.trigger('owl.prev');
+    })
+
+  </script> 
+  
+  </body>
+</html>

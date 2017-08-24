@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="../static/js/sizebasefont.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/mobiscroll.css">
+    <title>游记</title> 
+  </head>
+  <body style="position:relative;">
+  <header class="head batten">
+    <em class="back"></em>
+    <span>添加常用游客</span>
+    <em class="lang"></em>
+  </header>
+ 
+  <article class="tdairy" style=" padding-top:3rem;">
+     <dl>
+        <dt>姓名</dt><dd><input type="text" placeholder="必填"></dd>
+     </dl>
+     <dl>
+        <dt>证件类型</dt><dd class="paper"><a class="cd-popup-trigger"><span>身份证</span><em></em></a></dd>
+     </dl>
+     <dl>
+        <dt>证件号</dt><dd><input type="text" placeholder="必填"></dd>
+     </dl>
+     <dl>
+        <dt>证件有效期</dt><dd class="papgg"><a class="cd-popup-triggerll"><span>证件有效期至</span><em></em></a></dd>
+     </dl>
+     <dl>
+        <dt>护照签发地</dt><dd class="papgg"><a class="cd-popup-triggeruu"><span>上海</span><em></em></a></dd>
+     </dl>
+     <dl>
+        <dt>英语姓</dt><dd><input type="text" placeholder="必填"></dd>
+     </dl>
+     <dl>
+        <dt>英语名</dt><dd><input type="text" placeholder="必填"></dd>
+     </dl>
+     
+     <dl>
+        <dt>性别</dt><dd class="gender"><a><em></em>男</a><a><em></em>女</a></dd>
+     </dl>
+     <dl>
+        <dt>生日</dt><dd><input value="" class="" readonly placeholder="您的生日是?" name="appDate" id="appDate" type="text"></dd>
+     </dl>
+     <dl>
+        <dt>国籍</dt><dd><input type="text" placeholder="中国"></dd>
+     </dl>
+     <dl>
+        <dt>手机</dt><dd><input type="text" placeholder="必填"></dd>
+     </dl>
+  </article>
+
+<div class="cd-popuper" role="alert" style="z-index:999;">
+	<div class="cd-popup-containerdd">
+		<ul class="ull">
+             <li><a>身份证</a></li><li><a>护照</a></li>
+        </ul>
+	</div>
+</div>
+
+<div class="cd-popuped" role="alert" style="z-index:999;">
+	<div class="cd-popup-containerff">
+		<ul class="ull">
+             <li><a>2015</a></li><li><a>2016</a></li><li><a>2017</a></li><li><a>2018</a></li>
+             <li><a>2019</a></li><li><a>2020</a></li><li><a>2021</a></li><li><a>2022</a></li>
+        </ul>
+	</div>
+</div>
+
+<div class="cd-popupes" role="alert" style="z-index:999;">
+	<div class="cd-popup-containerss">
+		<ul class="ull">
+             <li><a>上海</a></li><li><a>北京</a></li><li><a>深圳</a></li><li><a>武汉</a></li>
+        </ul>
+	</div>
+</div>
+  
+  <script src="../static/js/jquery.min.js"></script>  
+  <script src="../static/js/main.js"></script>
+<script src="../static/js/jquery.1.7.2.min.js"></script>
+    <script src="../static/js/mobiscroll_1.js" type="text/javascript"></script>
+	<script src="../static/js/mobiscroll.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+	(function ($) {
+    $.mobiscroll.i18n.zh = $.extend($.mobiscroll.i18n.zh, {
+        setText: '确定',
+        cancelText: '取消'
+    });
+    })(jQuery);
+        $(function () {
+			var currYear = (new Date()).getFullYear();	
+			var opt={};
+			opt.date = {preset : 'date'};
+			opt.datetime = {preset : 'datetime'};
+			opt.time = {preset : 'time'};
+			opt.default = {
+				theme: 'android-ics light', //皮肤样式
+		        display: 'modal', //显示方式 
+		        mode: 'scroller', //日期选择模式
+				dateFormat: 'yyyy-mm-dd',
+				lang: 'zh',
+				showNow: true,
+				nowText: "今天",
+		        startYear: currYear - 100, //开始年份
+		        endYear: currYear + 100 //结束年份
+			};
+
+		  	$("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+		  	var optDateTime = $.extend(opt['datetime'], opt['default']);
+		  	var optTime = $.extend(opt['time'], opt['default']);
+		    $("#appDateTime").mobiscroll(optDateTime).datetime(optDateTime);
+		    $("#appTime").mobiscroll(optTime).time(optTime);
+        });
+    </script>
+  
+  </body>
+</html>

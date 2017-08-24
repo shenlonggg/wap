@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="static/js/sizebasefont.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <title></title> 
+  </head>
+ 
+  <body style="position:relative; background:#fff;">
+  <header class="head batten">
+    <em class="back"></em>
+    <span>日本</span>
+  </header>
+
+<ul class="category">
+<li><a class="cd-popup-trigger"><span>价格排序</span><img src="static/images/arrow2.png"></a></li>
+<li class="selling"><a><span>热销</span></a></li>
+<li><a><span>筛选</span><img src="static/images/arrow2.png"></a></a></li>
+</ul>
+
+<style>
+
+</style> 
+  
+<article class="prolist" style="padding-top:5.91rem;">
+
+<div class="cd-popup" role="alert" style="z-index:999;">
+	<div class="cd-popup-container">
+		<ul class="ull">
+             <li><a>价格从低到高</a></li><li><a>价格从高到低</a></li>
+        </ul>
+	</div>
+</div>
+
+<section class="regionyy">
+<span>售卖价格区间（元）</span>
+<span class="siding"><input type="text" size="4"><em>-</em><input type="text" size="4"></span>
+</section> 
+
+<section class="terval">
+<ul>
+<li id="w1"><a>500以下</a></li>
+<li id="w2"><a>500-1000</a></li>
+<li id="w3"><a>1000-2000</a></li>
+<li id="w4" class="interv"><a>2000-3000</a></li>
+<li id="w5"><a>3000-4000</a></li>
+<li id="w6"><a>4000-5000</a></li>
+<li id="w7"><a>5000-10000</a></li>
+<li id="w8" class="interv"><a>10000以上</a></li>
+<div style=" clear:both;"></div>
+</ul>
+</section>
+
+
+<section class="stroke">
+<div class="tance"><span>行程天数</span>
+<label class="numtxt">
+<input class="min" name="" type="button" value="" />
+<input class="text_box" name="" type="text" value="0" maxlength="2" readonly />
+<input class="add" name="" type="button" value="" />
+</label></div>
+</section>
+
+<section class="stroke">
+<div class="tance"><span>最早出发日期</span><input type="date"></div>
+</section>
+
+<section class="stroke distan">
+<div class="tance"><span>最晚出发日期</span><input type="date"></div>
+</section>
+   
+</article>
+  
+<script src="static/js/jquery.min.js"></script>  
+</body>
+</html>
+<script src="static/js/main.js"></script>
+<script src="static/js/jquery1.3.2.js"></script>
+<script type="text/javascript">
+		jQuery(function(){
+			var list = jQuery('#w1, #w2, #w3, #w4, #w5, ,#w6, ,#w7, ,#w8, #w9,');
+			list.click(function(){
+				list.removeClass('focuswall');
+				jQuery(this).addClass('focuswall');
+				return false;
+			});
+		});
+</script>
+<script type="text/javascript">
+$(function(){ 
+
+  $(".add").click(function(){ 
+
+    var t=$(this).parent().find('input[class*=text_box]'); 
+
+    t.val(parseInt(t.val())+1) 
+
+    setTotal(); 
+
+  }) 
+
+  $(".min").click(function(){ 
+
+    var t=$(this).parent().find('input[class*=text_box]'); 
+
+    t.val(parseInt(t.val())-1) 
+
+    if(parseInt(t.val())<0){ 
+
+      t.val(0); 
+
+    } 
+  }) 
+}) 
+</script>
+
+ 
